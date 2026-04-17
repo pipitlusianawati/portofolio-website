@@ -2,64 +2,99 @@ body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     background: linear-gradient(to bottom, #e0f7fa, #b3e5fc);
+    color: #033649;
 }
 
-/* Navbar */
+/* NAVBAR */
 nav {
     background: #0277bd;
     color: white;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 15px 30px;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+nav h2 {
+    margin: 0;
 }
 
 nav ul {
     display: flex;
     gap: 20px;
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    transition: opacity 0.3s;
+    font-weight: 500;
+    position: relative;
 }
 
-nav a:hover {
-    opacity: 0.8;
+/* Underline hover effect */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #4fc3f7;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
 }
 
-/* Section */
+nav a:hover::after {
+    width: 100%;
+}
+
+/* SECTION */
 section {
-    padding: 50px;
+    padding: 60px 20px;
     text-align: center;
+    max-width: 1000px;
+    margin: auto;
 }
 
 section h1, section h2 {
     color: #01579b;
+    margin-bottom: 20px;
 }
 
-/* Foto */
+/* FOTO */
 #about img {
     border-radius: 50%;
     border: 3px solid #0288d1;
+    margin-top: 15px;
 }
 
-/* Project */
+/* PROJECT CARD */
 .project {
     background: white;
     margin: 20px auto;
     padding: 20px;
-    width: 60%;
+    width: 100%;
+    max-width: 600px;
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .project img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
@@ -67,7 +102,7 @@ section h1, section h2 {
     transform: scale(1.05);
 }
 
-/* Button */
+/* BUTTON */
 a[download] {
     background: #0288d1;
     color: white;
@@ -75,6 +110,7 @@ a[download] {
     border-radius: 10px;
     text-decoration: none;
     display: inline-block;
+    margin-top: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -83,7 +119,7 @@ a[download]:hover {
     box-shadow: 0 4px 15px rgba(2, 136, 209, 0.4);
 }
 
-/* Skills */
+/* SKILLS */
 #skills ul {
     list-style: none;
     padding: 0;
@@ -91,33 +127,77 @@ a[download]:hover {
 
 #skills li {
     background: #4fc3f7;
-    margin: 10px auto;
-    padding: 10px;
-    width: 200px;
-    border-radius: 10px;
+    margin: 8px;
+    padding: 10px 15px;
+    border-radius: 20px;
     display: inline-block;
+    font-size: 14px;
 }
 
-/* Contact */
+/* CONTACT */
 #contact {
     background: #01579b;
     color: white;
+    border-radius: 20px 20px 0 0;
 }
 
-/* Smooth scroll */
+/* SMOOTH SCROLL */
 html {
     scroll-behavior: smooth;
 }
 
-/* Responsive */
+/* ===================== */
+/* 📱 RESPONSIVE DESIGN */
+/* ===================== */
+
+/* Tablet */
 @media (max-width: 768px) {
+
     nav {
         flex-direction: column;
         gap: 10px;
         text-align: center;
     }
-    
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
     .project {
-        width: 90%;
+        width: 100%;
+    }
+}
+
+/* HP kecil */
+@media (max-width: 480px) {
+
+    nav h2 {
+        font-size: 18px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    section h1 {
+        font-size: 24px;
+    }
+
+    section h2 {
+        font-size: 20px;
+    }
+
+    .project {
+        padding: 15px;
+    }
+
+    #skills li {
+        font-size: 12px;
+        padding: 8px 12px;
     }
 }
