@@ -1,13 +1,28 @@
+/* ===================== */
+/* 🌌 ROOT COLOR SYSTEM */
+/* ===================== */
+:root {
+    --bg-dark: #0b1f3a;
+    --bg-gradient: linear-gradient(135deg, #0b1f3a, #0e2a4d);
+    --primary: #1e90ff;
+    --primary-light: #3aa0ff;
+    --text-main: #ffffff;
+    --text-secondary: #a0b3c6;
+    --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* BODY */
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
     margin: 0;
-    background: linear-gradient(to bottom, #e0f7fa, #b3e5fc);
-    color: #033649;
+    background: var(--bg-gradient);
+    color: var(--text-main);
 }
 
 /* NAVBAR */
 nav {
-    background: #0277bd;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
     color: white;
     display: flex;
     justify-content: space-between;
@@ -16,35 +31,22 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-nav h2 {
-    margin: 0;
-}
-
-nav ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 nav a {
-    color: white;
+    color: var(--text-main);
     text-decoration: none;
     font-weight: 500;
     position: relative;
 }
 
-/* Underline hover effect */
+/* Hover underline */
 nav a::after {
     content: "";
     position: absolute;
     width: 0%;
     height: 2px;
-    background: #4fc3f7;
+    background: var(--primary);
     left: 0;
     bottom: -5px;
     transition: 0.3s;
@@ -56,89 +58,93 @@ nav a:hover::after {
 
 /* SECTION */
 section {
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
     max-width: 1000px;
     margin: auto;
 }
 
 section h1, section h2 {
-    color: #01579b;
+    color: var(--text-main);
     margin-bottom: 20px;
+}
+
+p {
+    color: var(--text-secondary);
 }
 
 /* FOTO */
 #about img {
     border-radius: 50%;
-    border: 3px solid #0288d1;
+    border: 3px solid var(--primary);
     margin-top: 15px;
 }
 
 /* PROJECT CARD */
 .project {
-    background: white;
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
     margin: 20px auto;
     padding: 20px;
     width: 100%;
     max-width: 600px;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
 }
 
 .project img {
     width: 100%;
     max-width: 250px;
-    border-radius: 10px;
+    border-radius: 12px;
     transition: transform 0.3s ease;
 }
 
 .project img:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 /* BUTTON */
 a[download] {
-    background: #0288d1;
+    background: var(--primary);
     color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
+    padding: 12px 24px;
+    border-radius: 30px;
     text-decoration: none;
     display: inline-block;
     margin-top: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: all 0.3s;
 }
 
 a[download]:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(2, 136, 209, 0.4);
+    background: var(--primary-light);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(30,144,255,0.4);
 }
 
 /* SKILLS */
-#skills ul {
-    list-style: none;
-    padding: 0;
-}
-
 #skills li {
-    background: #4fc3f7;
+    background: rgba(30,144,255,0.2);
+    color: var(--primary-light);
     margin: 8px;
     padding: 10px 15px;
     border-radius: 20px;
     display: inline-block;
     font-size: 14px;
+    backdrop-filter: blur(5px);
 }
 
 /* CONTACT */
 #contact {
-    background: #01579b;
+    background: rgba(255,255,255,0.05);
     color: white;
     border-radius: 20px 20px 0 0;
+    backdrop-filter: blur(10px);
 }
 
 /* SMOOTH SCROLL */
@@ -147,10 +153,9 @@ html {
 }
 
 /* ===================== */
-/* 📱 RESPONSIVE DESIGN */
+/* 📱 RESPONSIVE */
 /* ===================== */
 
-/* Tablet */
 @media (max-width: 768px) {
 
     nav {
@@ -165,15 +170,10 @@ html {
     }
 
     section {
-        padding: 40px 15px;
-    }
-
-    .project {
-        width: 100%;
+        padding: 50px 15px;
     }
 }
 
-/* HP kecil */
 @media (max-width: 480px) {
 
     nav h2 {
