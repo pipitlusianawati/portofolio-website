@@ -2,13 +2,14 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio Pipit Lusianawati</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Pipit Lusianawati</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
-    <h2>Pipit Lusianawati | Water Engineering Portfolio</h2>
+    <h2>Pipit Lusianawati | Water Engineering Portofolio</h2>
     <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#cv">CV</a></li>
@@ -19,11 +20,16 @@
 </nav>
 
 <section id="about" class="hero">
-    <h1 class="hero-title">
-    <span id="typing-line1"></span><br>
-    <span id="typing-line2"></span>
-</h1>
-        <p>A Water Resources Engineering student with a strong interest in hydraulic analysis and engineering simulation.</p>
+    <div class="hero-content">
+        <h1 class="hero-title">
+            <span id="typing-line1"></span><br>
+            <span id="typing-line2"></span>
+        </h1>
+        <p>I am a Water Resources Engineering student focused on hydraulic analysis, 
+            water infrastructure design, and computational flow modeling. I am experienced 
+            in using AutoCAD, SketchUp, and Revit for engineering design; HEC-RAS for hydraulic 
+            simulation; ArcGIS for spatial analysis; ANSYS Fluent for computational fluid dynamics 
+            (CFD); and GeoStudio for geotechnical evaluation.</p>
     </div>
 
     <div class="hero-img">
@@ -31,44 +37,80 @@
     </div>
 </section>
 
-<section id="cv">
-    <h2>Curriculum Vitae</h2>
-    <a href="assets/cv.pdf" download>Download CV</a>
+<section id="cv" class="cv-section">
+    <div class="container">
+        <h2>Curriculum Vitae</h2>
+
+        <div class="cv-grid">
+
+            <div class="cv-item">
+                <h3>Education</h3>
+                <p>D4 Rekayasa Konstruksi Bangunan Air</p>
+                <p>Institut Teknologi Sepuluh Nopember</p>
+            </div>
+
+            <div class="cv-item">
+                <h3>Core Expertise</h3>
+                <ul>
+                    <li>Hydraulic Modeling (HEC-RAS, ANSYS Fluent)</li>
+                    <li>Water Infrastructure Design & 3D Modeling (AutoCAD, SketchUp, Revit)</li>
+                    <li>Spatial Analysis & Mapping (ArcGIS)</li>
+                    <li>Geotechnical Analysis (GeoStudio)</li>
+                    <li>Engineering Data Analysis (Microsoft Excel)</li>
+                    <li>Technical Report Writing (Microsoft Word)</li>
+                </ul>
+            </div>
+
+            <div class="cv-item">
+                <h3>Key Projects</h3>
+                <ul>
+                    <li>Spillway Flow Simulation (ANSYS Fluent)</li>
+                    <li>Stilling Basin Analysis</li>
+                    <li>Flood Modeling (HEC-RAS)</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Download Button -->
+        <a href="assets/cv.pdf" download class="btn-download">
+            Download CV
+        </a>
+    </div>
 </section>
 
 <section id="portfolio">
     <h2>Projects</h2>
 
     <div class="project">
-    <h3>Water Flow Simulation</h3>
-    <img src="assets/project1.png" alt="Water Flow Simulation">
-    <p>Performed flow analysis using ANSYS Fluent to understand water distribution patterns and hydraulic behavior.</p>
-</div>
+        <h3>Water Flow Simulation</h3>
+        <img src="assets/project1.png" alt="Water Flow Simulation">
+        <p>Performed flow analysis using ANSYS Fluent to understand water distribution patterns and hydraulic behavior.</p>
+    </div>
 
-<div class="project">
-    <h3>Drainage System Design</h3>
-    <img src="assets/drainase.png" alt="Drainage System Design">
-    <p>Designed an efficient drainage system considering rainfall intensity, runoff, and channel capacity to prevent flooding.</p>
-</div>
+    <div class="project">
+        <h3>Drainage System Design</h3>
+        <img src="assets/drainase.png" alt="Drainage System Design">
+        <p>Designed an efficient drainage system considering rainfall intensity, runoff, and channel capacity to prevent flooding.</p>
+    </div>
 
-<div class="project">
-    <h3>Integrated Project: Stilling Basin Design (Bendung Candi Limo)</h3>
-    <img src="assets/bendung.png" alt="Stilling Basin Design">
-    <p>Designed a stilling basin as part of an integrated hydraulic structure to reduce flow energy and prevent downstream erosion.</p>
-</div>
+    <div class="project">
+        <h3>Integrated Project: Stilling Basin Design (Bendung Candi Limo)</h3>
+        <img src="assets/bendung.png" alt="Stilling Basin Design">
+        <p>Designed a stilling basin as part of an integrated hydraulic structure to reduce flow energy and prevent downstream erosion.</p>
+    </div>
 
-<div class="project">
-    <h3>Water Resources Management at ITS Manyar Campus</h3>
-    <img src="assets/drenova.png" alt="Drenova System">
-    <p>Developed a sustainable drainage solution using Drenova (rainwater harvesting-based drainage system) to improve water management on campus.</p>
-</div>
+    <div class="project">
+        <h3>Water Resources Management at ITS Manyar Campus</h3>
+        <img src="assets/drenova.png" alt="Drenova System">
+        <p>Developed a sustainable drainage solution using Drenova (rainwater harvesting-based drainage system) to improve water management on campus.</p>
+    </div>
 
-<div class="project">
-    <h3>Water Engineering Competition</h3>
-    <img src="assets/lomba.png" alt="Water Engineering Competition">
-    <p>Participated in a water engineering competition, applying problem-solving and technical analysis skills to real-world hydraulic challenges.</p>
-</div>
-
+    <div class="project">
+        <h3>Water Engineering Competition</h3>
+        <img src="assets/lomba.png" alt="Water Engineering Competition">
+        <p>Participated in a water engineering competition, applying problem-solving and technical analysis skills to real-world hydraulic challenges.</p>
+    </div>
 </section>
 
 <section id="skills">
@@ -83,8 +125,8 @@
 
 <section id="contact">
     <h2>Contact</h2>
-    <p>Email: pipitcollege@gmail.com</p>
-    <p>LinkedIn: linkedin.com/in/pipit-lusianawati</p>
+    <p>Email: <a href="mailto:pipitcollege@gmail.com">pipitcollege@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/pipit-lusianawati" target="_blank">linkedin.com/in/pipit-lusianawati</a></p>
 </section>
 
 <script src="script.js"></script>
