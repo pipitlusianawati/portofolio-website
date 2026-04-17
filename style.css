@@ -9,6 +9,10 @@
     --text-main: #ffffff;
     --text-secondary: #a0b3c6;
     --card-bg: rgba(255, 255, 255, 0.05);
+
+    /* NEW */
+    --heading: #4fc3f7;
+    --highlight: #81d4fa;
 }
 
 /* BODY */
@@ -19,7 +23,9 @@ body {
     color: var(--text-main);
 }
 
+/* ===================== */
 /* NAVBAR */
+/* ===================== */
 nav {
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(10px);
@@ -33,30 +39,36 @@ nav {
     z-index: 100;
 }
 
-nav a {
+/* MENU */
+nav ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* MENU ITEM (ROUNDED BOX) */
+nav ul li a {
+    background: rgba(255,255,255,0.1);
     color: var(--text-main);
     text-decoration: none;
-    font-weight: 500;
-    position: relative;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.3s ease;
 }
 
-/* Hover underline */
-nav a::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 2px;
+/* HOVER */
+nav ul li a:hover {
     background: var(--primary);
-    left: 0;
-    bottom: -5px;
-    transition: 0.3s;
+    color: white;
+    transform: translateY(-2px);
 }
 
-nav a:hover::after {
-    width: 100%;
-}
-
+/* ===================== */
 /* SECTION */
+/* ===================== */
 section {
     padding: 80px 20px;
     text-align: center;
@@ -64,23 +76,58 @@ section {
     margin: auto;
 }
 
+/* JUDUL */
 section h1, section h2 {
-    color: var(--text-main);
-    margin-bottom: 20px;
+    color: var(--heading);
+    letter-spacing: 0.5px;
 }
 
+/* GRADIENT TEXT */
+section h1 {
+    background: linear-gradient(90deg, #4fc3f7, #81d4fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* PARAGRAF */
 p {
     color: var(--text-secondary);
+    line-height: 1.6;
 }
 
+/* ===================== */
+/* ANIMASI TYPING */
+/* ===================== */
+.typing-text {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid var(--primary);
+    width: 0;
+    margin: auto;
+    animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+/* ===================== */
 /* FOTO */
+/* ===================== */
 #about img {
     border-radius: 50%;
     border: 3px solid var(--primary);
     margin-top: 15px;
 }
 
+/* ===================== */
 /* PROJECT CARD */
+/* ===================== */
 .project {
     background: var(--card-bg);
     backdrop-filter: blur(12px);
@@ -100,16 +147,20 @@ p {
 
 .project img {
     width: 100%;
-    max-width: 250px;
+    max-width: 300px;
     border-radius: 12px;
+    margin-top: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
 }
 
 .project img:hover {
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 
+/* ===================== */
 /* BUTTON */
+/* ===================== */
 a[download] {
     background: var(--primary);
     color: white;
@@ -127,7 +178,9 @@ a[download]:hover {
     box-shadow: 0 8px 20px rgba(30,144,255,0.4);
 }
 
+/* ===================== */
 /* SKILLS */
+/* ===================== */
 #skills li {
     background: rgba(30,144,255,0.2);
     color: var(--primary-light);
@@ -139,7 +192,9 @@ a[download]:hover {
     backdrop-filter: blur(5px);
 }
 
+/* ===================== */
 /* CONTACT */
+/* ===================== */
 #contact {
     background: rgba(255,255,255,0.05);
     color: white;
@@ -147,7 +202,9 @@ a[download]:hover {
     backdrop-filter: blur(10px);
 }
 
+/* ===================== */
 /* SMOOTH SCROLL */
+/* ===================== */
 html {
     scroll-behavior: smooth;
 }
@@ -155,9 +212,7 @@ html {
 /* ===================== */
 /* 📱 RESPONSIVE */
 /* ===================== */
-
 @media (max-width: 768px) {
-
     nav {
         flex-direction: column;
         gap: 10px;
@@ -175,7 +230,6 @@ html {
 }
 
 @media (max-width: 480px) {
-
     nav h2 {
         font-size: 18px;
     }
