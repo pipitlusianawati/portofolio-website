@@ -10,7 +10,6 @@
     --text-secondary: #a0b3c6;
     --card-bg: rgba(255, 255, 255, 0.05);
 
-    /* NEW */
     --heading: #4fc3f7;
     --highlight: #81d4fa;
 }
@@ -29,7 +28,6 @@ body {
 nav {
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(10px);
-    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,7 +37,6 @@ nav {
     z-index: 100;
 }
 
-/* MENU */
 nav ul {
     display: flex;
     gap: 10px;
@@ -48,7 +45,6 @@ nav ul {
     padding: 0;
 }
 
-/* MENU ITEM (ROUNDED BOX) */
 nav ul li a {
     background: rgba(255,255,255,0.1);
     color: var(--text-main);
@@ -59,10 +55,8 @@ nav ul li a {
     transition: all 0.3s ease;
 }
 
-/* HOVER */
 nav ul li a:hover {
     background: var(--primary);
-    color: white;
     transform: translateY(-2px);
 }
 
@@ -77,16 +71,16 @@ section {
 }
 
 /* JUDUL */
-section h1, section h2 {
-    color: var(--heading);
-    letter-spacing: 0.5px;
+section h1 {
+    background: linear-gradient(90deg, #4fc3f7, #ffffff, #4fc3f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
 }
 
-/* GRADIENT TEXT */
-section h1 {
-    background: linear-gradient(90deg, #4fc3f7, #81d4fa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+section h2 {
+    color: var(--heading);
 }
 
 /* PARAGRAF */
@@ -96,24 +90,44 @@ p {
 }
 
 /* ===================== */
-/* ANIMASI TYPING */
+/* ✨ ANIMASI TEKS */
 /* ===================== */
-.typing-text {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 3px solid var(--primary);
-    width: 0;
-    margin: auto;
-    animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+.hero-title {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1.5s ease forwards;
 }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+.highlight {
+    background: linear-gradient(90deg, #4fc3f7, #81d4fa, #4fc3f7);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+}
+
+#typing-line1::after,
+#typing-line2::after {
+    content: "|";
+    margin-left: 5px;
+    animation: blink 1s infinite;
 }
 
 @keyframes blink {
-    50% { border-color: transparent }
+    50% { opacity: 0; }
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shine {
+    0% { background-position: 0% }
+    100% { background-position: 200% }
 }
 
 /* ===================== */
@@ -133,11 +147,10 @@ p {
     backdrop-filter: blur(12px);
     margin: 20px auto;
     padding: 20px;
-    width: 100%;
     max-width: 600px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: 0.3s;
 }
 
 .project:hover {
@@ -151,7 +164,7 @@ p {
     border-radius: 12px;
     margin-top: 10px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
+    transition: 0.3s;
 }
 
 .project img:hover {
@@ -169,7 +182,7 @@ a[download] {
     text-decoration: none;
     display: inline-block;
     margin-top: 10px;
-    transition: all 0.3s;
+    transition: 0.3s;
 }
 
 a[download]:hover {
@@ -189,7 +202,6 @@ a[download]:hover {
     border-radius: 20px;
     display: inline-block;
     font-size: 14px;
-    backdrop-filter: blur(5px);
 }
 
 /* ===================== */
@@ -197,26 +209,16 @@ a[download]:hover {
 /* ===================== */
 #contact {
     background: rgba(255,255,255,0.05);
-    color: white;
     border-radius: 20px 20px 0 0;
-    backdrop-filter: blur(10px);
 }
 
 /* ===================== */
-/* SMOOTH SCROLL */
-/* ===================== */
-html {
-    scroll-behavior: smooth;
-}
-
-/* ===================== */
-/* 📱 RESPONSIVE */
+/* RESPONSIVE */
 /* ===================== */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
         gap: 10px;
-        text-align: center;
     }
 
     nav ul {
@@ -230,14 +232,6 @@ html {
 }
 
 @media (max-width: 480px) {
-    nav h2 {
-        font-size: 18px;
-    }
-
-    nav a {
-        font-size: 14px;
-    }
-
     section h1 {
         font-size: 24px;
     }
@@ -245,13 +239,75 @@ html {
     section h2 {
         font-size: 20px;
     }
+}
 
-    .project {
-        padding: 15px;
-    }
+/* ===================== */
+/* 📄 CV SECTION UPGRADE */
+/* ===================== */
+.cv-section {
+    margin-top: 40px;
+}
 
-    #skills li {
-        font-size: 12px;
-        padding: 8px 12px;
-    }
+/* GRID LAYOUT */
+.cv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* CARD STYLE */
+.cv-item {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    padding: 25px;
+    border-radius: 20px;
+    text-align: left;
+    border: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+/* GLOW EFFECT */
+.cv-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(30,144,255,0.2), transparent);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+/* HOVER */
+.cv-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--primary);
+}
+
+.cv-item:hover::before {
+    opacity: 1;
+}
+
+/* TITLE */
+.cv-item h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* LIST */
+.cv-item ul {
+    padding-left: 18px;
+}
+
+.cv-item ul li {
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+    transition: 0.3s;
+}
+
+/* LIST HOVER */
+.cv-item ul li:hover {
+    color: var(--primary-light);
+    transform: translateX(5px);
 }

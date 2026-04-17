@@ -7,7 +7,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 const line1 = "I'm Pipit Lusianawati";
-const line2 = "Water Engineer | Hydraulic Analyst | Hydraulic Analysis Enthusiast";
+const line2 = "Water Resources Engineer | Hydraulic Modeling Specialist | Flow Dynamics Analyst";
 
 let i = 0;
 let j = 0;
