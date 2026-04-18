@@ -4,131 +4,572 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Pipit Lusianawati</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
-    <h2>Pipit Lusianawati | Water Engineering Portofolio</h2>
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar">
+    <h2>Pipit Lusianawati</h2>
     <ul>
-        <li><a href="#about">About</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#profile">Profile</a></li>
         <li><a href="#cv">CV</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#portfolio">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
-<section id="about" class="hero">
-    <div class="hero-content">
-        <h1 class="hero-title">
-            <span id="typing-line1"></span><br>
-            <span id="typing-line2"></span>
-        </h1>
-        <p>I am a Water Resources Engineering student focused on hydraulic analysis, 
-            water infrastructure design, and computational flow modeling. I am experienced 
-            in using AutoCAD, SketchUp, and Revit for engineering design; HEC-RAS for hydraulic 
-            simulation; ArcGIS for spatial analysis; ANSYS Fluent for computational fluid dynamics 
-            (CFD); and GeoStudio for geotechnical evaluation.</p>
+<!-- ===================== HERO ===================== -->
+<section id="home" class="hero">
+
+    <div class="hero-container">
+
+        <div class="hero-text">
+            <p class="hero-label">UNDERGRADUATE WATER ENGINEERING</p>
+
+            <h1 class="hero-title">
+                Pipit Lusianawati
+            </h1>
+
+            <h2 class="hero-subtitle">
+                Water Resources Engineer
+            </h2>
+
+            <p class="hero-desc">
+                Undergraduate student of Water Resources Engineering at Institut Teknologi Sepuluh Nopember.
+                Experienced in hydraulic modeling, drainage planning,
+                and water infrastructure analysis.
+            </p>
+
+            <div class="hero-btn">
+                <a href="#portfolio" class="btn-primary">View Projects</a>
+                <a href="assets/cv.pdf" class="btn-secondary">View CV</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="assets/foto.jpeg" alt="Pipit Lusianawati">
+        </div>
+
     </div>
 
-    <div class="hero-img">
-        <img src="assets/foto.jpg" alt="Pipit Lusianawati">
+</section>
+
+<!-- ===================== PROFILE ===================== -->
+<section id="profile">
+    <h2>Profile</h2>
+
+    <p>
+        I am an undergraduate student in Water Resources Engineering with a strong
+        interest in hydraulic systems and water infrastructure development. My focus
+        includes flood control, drainage systems, irrigation planning, and clean water distribution.
+    </p>
+
+    <p>
+        I have experience in both analytical and computational approaches using tools
+        such as HEC-RAS, EPANET, ANSYS Fluent, AutoCAD, Revit, SketchUp, ArcGIS,
+        and GeoStudio to support engineering decision-making.
+    </p>
+
+    <div class="profile-grid">
+
+        <div>
+            <h3>Hydraulic & Drainage</h3>
+            <p>Flood Analysis · Drainage Design · Cross Section · Cost Estimation</p>
+        </div>
+
+        <div>
+            <h3>Water Distribution</h3>
+            <p>EPANET · Pipe Network · Water Supply Planning</p>
+        </div>
+
+        <div>
+            <h3>Engineering Design</h3>
+            <p>AutoCAD · Revit · SketchUp · Technical Drawing</p>
+        </div>
+
+        <div>
+            <h3>Simulation & Analysis</h3>
+            <p>HEC-RAS · ANSYS Fluent · GeoStudio · ArcGIS</p>
+        </div>
+
+        <div>
+            <h3>Project Management</h3>
+            <p>Ms. Project · Timeline · CCO · Monitoring</p>
+        </div>
+
     </div>
 </section>
 
+<!-- ===================== CV ===================== -->
 <section id="cv" class="cv-section">
-    <div class="container">
-        <h2>Curriculum Vitae</h2>
+    <h2>Curriculum Vitae</h2>
 
-        <div class="cv-grid">
+    <div class="cv-grid">
 
-            <div class="cv-item">
-                <h3>Education</h3>
-                <p>D4 Rekayasa Konstruksi Bangunan Air</p>
-                <p>Institut Teknologi Sepuluh Nopember</p>
+        <div class="cv-item">
+            <h3>Education</h3>
+            <p>D4 Rekayasa Konstruksi Bangunan Air</p>
+            <p>Institut Teknologi Sepuluh Nopember</p>
+            <p>2022 - 2026 (expected)</p>
+            <p>GPA : 3.64</p>
+        </div>
+
+        <div class="cv-item">
+            <h3>Core Expertise</h3>
+            <ul>
+                <li>Hydraulic Modeling</li>
+                <li>Water Infrastructure Design</li>
+                <li>3D Modeling</li>
+                <li>Spatial Analysis</li>
+                <li>Geotechnical Analysis</li>
+                <li>Project Management</li>
+            </ul>
+        </div>
+
+        <div class="cv-item">
+            <h3>Key Projects</h3>
+            <ul>
+                <li>Spillway Flow Simulation</li>
+                <li>Stilling Basin Analysis</li>
+                <li>Flood Modeling</li>
+                <li>Drainage System Design</li>
+                <li>Water Distribution System Design</li>
+                <li>Irrigation System Design</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="cv-download">
+    <a href="assets/cv.pdf" download>
+        <h3>Download CV</h3>
+        <p>Click to view and download my full curriculum vitae</p>
+    </a>
+</div>
+</section>
+
+<!-- ===================== Experience & Achievements ===================== -->
+<section id="experience">
+    <h2>Experience & Achievements</h2>
+
+    <div class="timeline">
+
+    <!-- ITEM -->
+     <div class="timeline-item">
+    <div class="timeline-content">
+
+        <!-- SLIDER 4 FOTO -->
+        <div class="slider-wrapper">
+
+            <button class="slider-btn left" onclick="moveSlide(this, -1)">&#10094;</button>
+
+            <div class="slider-window">
+                <div class="slider-track">
+                    <img src="assets/intern2.jpeg" alt="Internship Photo 1">
+                    <img src="assets/intern1.jpeg" alt="Internship Photo 2">
+                    <img src="assets/intern3.jpeg" alt="Internship Photo 3">
+                    <img src="assets/intern4.jpeg" alt="Internship Photo 4">
+                </div>
             </div>
 
-            <div class="cv-item">
-                <h3>Core Expertise</h3>
-                <ul>
-                    <li>Hydraulic Modeling (HEC-RAS, ANSYS Fluent)</li>
-                    <li>Water Infrastructure Design & 3D Modeling (AutoCAD, SketchUp, Revit)</li>
-                    <li>Spatial Analysis & Mapping (ArcGIS)</li>
-                    <li>Geotechnical Analysis (GeoStudio)</li>
-                    <li>Engineering Data Analysis (Microsoft Excel)</li>
-                    <li>Technical Report Writing (Microsoft Word)</li>
-                </ul>
-            </div>
-
-            <div class="cv-item">
-                <h3>Key Projects</h3>
-                <ul>
-                    <li>Spillway Flow Simulation (ANSYS Fluent)</li>
-                    <li>Stilling Basin Analysis</li>
-                    <li>Flood Modeling (HEC-RAS)</li>
-                </ul>
-            </div>
+            <button class="slider-btn right" onclick="moveSlide(this, 1)">&#10095;</button>
 
         </div>
 
-        <!-- Download Button -->
-        <a href="assets/cv.pdf" download class="btn-download">
-            Download CV
-        </a>
+        <!-- TEXT -->
+        <div class="timeline-text">
+            <h3>Internship – Supervision Consultant <span class="badge">Internship</span></h3>
+            <span class="timeline-date">Bendungan Cabean • 2025</span>
+
+            <p>
+                Participated in supervision activities for dam construction, focusing on quality control,
+                field testing, and project monitoring.
+            </p>
+
+            <ul>
+                <li>Assisted in field measurement and progress opname</li>
+                <li>Conducted quality control inspections for construction work</li>
+                <li>Prepared monthly project reports</li>
+                <li>Operated drone for site documentation and monitoring</li>
+                <li>Performed field testing such as water pressure tests and soil/geotechnical tests</li>
+                <li>Conducted material testing and evaluation</li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+    <!-- 2 -->
+    <div class="timeline-item">
+        <div class="timeline-content">
+
+            <!-- LEFT: SLIDER -->
+            <div class="slider-wrapper">
+
+                <button class="slider-btn right" onclick="moveSlide(this, -1)">&#10094;</button>
+
+                <div class="slider-window">
+                    <div class="slider-track">
+                        <img src="assets/icef1.jpg" alt="ICEF Photo 1">
+                        <img src="assets/icef2.jpg" alt="ICEF Photo 2">
+                    </div>
+                </div>
+
+                <button class="slider-btn left" onclick="moveSlide(this, 1)">&#10095;</button>
+
+            </div>
+
+                <!-- RIGHT: TEXT -->
+                <div class="timeline-text">
+                    <h3>1st Winner – Essay Competition</h3>
+                    <span class="timeline-date">ICEF IPB 2024</span>
+                    <p>
+                        Achieved first place in a national essay competition organized by ICEF IPB,
+                        focusing on critical thinking and problem-solving in engineering-related topics.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="timeline-item">
+            <div class="timeline-content">
+
+                <!-- LEFT: SLIDER -->
+            <div class="slider-wrapper">
+
+                <button class="slider-btn right" onclick="moveSlide(this, -1)">&#10094;</button>
+
+                <div class="slider-window">
+                        <div class="slider-track">
+                            <img src="assets/cfp1.jpg" alt="UPNVJ Call for Paper Photo 1">
+                            <img src="assets/cfp2.jpg" alt="UPNVJ Call for Paper Photo 2">
+                        </div>
+                    </div>
+
+                    <button class="slider-btn left" onclick="moveSlide(this, 1)">&#10095;</button>
+
+                </div>
+
+                <!-- RIGHT: TEXT -->
+                <div class="timeline-text">
+                    <h3>Best Paper – Call for Paper Competition</h3>
+                    <span class="timeline-date">UPNVJ 2023</span>
+                    <p>
+                        Awarded Best Paper for research contribution in academic paper competition held by UPN Veteran Jakarta.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="timeline-item">
+            <div class="timeline-content">
+
+                <!-- LEFT: SLIDER -->
+            <div class="slider-wrapper">
+
+                <button class="slider-btn right" onclick="moveSlide(this, -1)">&#10094;</button>
+
+                <div class="slider-window">
+                        <div class="slider-track">
+                            <img src="assets/ukp1.jpg" alt="Bridge Competition UKP 1">
+                            <img src="assets/ukp2.jpg" alt="Bridge Competition UKP 2">
+                        </div>
+                    </div>
+
+                    <button class="slider-btn left" onclick="moveSlide(this, 1)">&#10095;</button>
+
+                </div>
+
+                <!-- RIGHT: TEXT -->
+                <div class="timeline-text">
+                    <h3>Finalist – Bridge Competition</h3>
+                    <span class="timeline-date">CIVIL EXPO UKP 2023</span>
+                    <p>
+                        Finalist in bridge engineering competition focusing on structural design, load analysis, and efficiency optimization.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 5 -->
+         <div class="timeline-item">
+            <div class="timeline-content">
+
+                <!-- LEFT: SLIDER -->
+            <div class="slider-wrapper">
+
+                <button class="slider-btn right" onclick="moveSlide(this, -1)">&#10094;</button>
+
+                <div class="slider-window">
+                        <div class="slider-track">
+                            <img src="assets/pkti1.jpeg" alt="Scientific Speaker PKTI-TD 1">
+                            <img src="assets/pkti2.jpeg" alt="Scientific Speaker PKTI-TD 2">
+                        </div>
+                    </div>
+
+                    <button class="slider-btn left" onclick="moveSlide(this, 1)">&#10095;</button>
+
+                </div>
+
+                 <!-- RIGHT: TEXT -->
+                <div class="timeline-text">
+                    <h3>Scientific Speaker</h3>
+                    <span class="timeline-date">PKTI-TD 2024 (ITS)</span>
+                    <p>
+                        Delivered scientific presentation in PKTI-TD 2024 across multiple departments such as Civil Engineering,
+                        Computer Engineering, Informatics, and Visual Communication Design at ITS.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 </section>
 
+<!-- ===================== PROJECT ===================== -->
 <section id="portfolio">
     <h2>Projects</h2>
 
-    <div class="project">
-        <h3>Water Flow Simulation</h3>
-        <img src="assets/project1.png" alt="Water Flow Simulation">
-        <p>Performed flow analysis using ANSYS Fluent to understand water distribution patterns and hydraulic behavior.</p>
-    </div>
+    <div class="project-grid">
 
-    <div class="project">
-        <h3>Drainage System Design</h3>
-        <img src="assets/drainase.png" alt="Drainage System Design">
-        <p>Designed an efficient drainage system considering rainfall intensity, runoff, and channel capacity to prevent flooding.</p>
-    </div>
+        <div class="project" onclick="toggleProject(this)">
+            <img src="assets/project1.png" onclick="openModal(this)">
+            <h3>Water Flow Simulation</h3>
 
-    <div class="project">
-        <h3>Integrated Project: Stilling Basin Design (Bendung Candi Limo)</h3>
-        <img src="assets/bendung.png" alt="Stilling Basin Design">
-        <p>Designed a stilling basin as part of an integrated hydraulic structure to reduce flow energy and prevent downstream erosion.</p>
-    </div>
+            <!-- BUTTON -->
+            <button class="project-btn" onclick="toggleProject(this)">
+                View Details →
+            </button>
 
-    <div class="project">
-        <h3>Water Resources Management at ITS Manyar Campus</h3>
-        <img src="assets/drenova.png" alt="Drenova System">
-        <p>Developed a sustainable drainage solution using Drenova (rainwater harvesting-based drainage system) to improve water management on campus.</p>
-    </div>
+            <!-- DETAIL -->
+            <div class="project-detail">
+                <p><b>Purpose:</b> To analyze flow characteristics and hydraulic behavior within a water structure.</p>
+                <p><b>Approach:</b> Computational Fluid Dynamics (CFD) simulation using ANSYS Fluent to model velocity distribution, pressure, and turbulence.</p>
+                <p><b>Outcome:</b> Obtained detailed flow patterns and energy distribution to support hydraulic design evaluation.</p>
+                <p><b>Tools:</b> ANSYS Fluent</p>
+            </div>
+        </div>
 
-    <div class="project">
-        <h3>Water Engineering Competition</h3>
-        <img src="assets/lomba.png" alt="Water Engineering Competition">
-        <p>Participated in a water engineering competition, applying problem-solving and technical analysis skills to real-world hydraulic challenges.</p>
+        <div class="project" onclick="toggleProject(this)">
+            <img src="assets/drainase.png" onclick="openModal(this)">
+            <h3>Drainage System (Srikana)</h3>
+
+            <!-- BUTTON -->
+            <button class="project-btn" onclick="toggleProject(this)">
+                View Details →
+            </button>
+
+            <!-- DETAIL -->
+            <div class="project-detail">
+                <p><b>Purpose:</b> To design an effective drainage system to reduce flood risk in Srikana, Surabaya.</p>
+                <p><b>Approach:</b> Runoff analysis based on rainfall intensity, catchment area, and channel capacity calculation.</p>
+                <p><b>Outcome:</b> Proposed drainage dimensions and layout capable of accommodating peak discharge.</p>
+                <p><b>Tools:</b> HEC-RAS, Ms. Excel, Ms. word, Canva</p>
+            </div>
+        </div>
+
+        <div class="project" onclick="toggleProject(this)">
+            <img src="assets/bendung.jpeg" onclick="openModal(this)">
+            <h3>Stilling Basin</h3>
+
+            <!-- BUTTON -->
+            <button class="project-btn" onclick="toggleProject(this)">
+                View Details →
+            </button>
+
+            <!-- DETAIL -->
+            <div class="project-detail">
+                <p><b>Purpose:</b> To design a stilling basin as an energy dissipation structure downstream of Candi Limo weir.</p>
+                <p><b>Approach:</b> Hydraulic analysis to determine flow characteristics and energy reduction requirements.</p>
+                <p><b>Outcome:</b> Developed a stilling basin design that minimizes erosion and ensures downstream stability.</p>
+                <p><b>Tools:</b> ANSYS Fluent, AutoCAD, Ms. Excel, Ms. Word, Geostudio, Sketchup, Canva</p>
+            </div>
+        </div>
+
+        <div class="project" onclick="toggleProject(this)">
+            <img src="assets/drenova.png" onclick="openModal(this)">
+            <h3>Drenova System</h3>
+
+            <!-- BUTTON -->
+            <button class="project-btn" onclick="toggleProject(this)">
+                View Details →
+            </button>
+
+            <!-- DETAIL -->
+            <div class="project-detail">
+                <p><b>Purpose:</b> To develop a sustainable drainage solution for ITS Manyar campus.</p>
+                <p><b>Approach:</b> Implementation of rainwater harvesting-based drainage system (Drenova) to manage surface runoff.</p>
+                <p><b>Outcome:</b> Improved water management system with reduced runoff and increased water utilization efficiency.</p>
+                <p><b>Tools:</b> Sketchup,AutoCAD, Ms. Excel, Ms. Word, Canva</p>
+            </div>
+        </div>
+
+        <div class="project" onclick="toggleProject(this)">
+            <img src="assets/lomba.png" onclick="openModal(this)">
+            <h3>Engineering Competition</h3>
+
+            <!-- BUTTON -->
+            <button class="project-btn" onclick="toggleProject(this)">
+                View Details →
+            </button>
+
+            <!-- DETAIL -->
+            <div class="project-detail">
+                <p><b>Purpose:</b> To solve real-world water engineering challenges in a competitive environment.</p>
+                <p><b>Approach:</b> Applied analytical thinking, engineering calculations, and design concepts under time constraints.</p>
+                <p><b>Outcome:</b> Feasible solution.</p>
+                <p><b>Tools:</b> Delivered a feasible engineering solution supported by technical analysis and presentation</p>
+            </div>
+        </div>
+
+        <div class="project" onclick="toggleProject(this)">
+            <img src="assets/insycle.png" onclick="openModal(this)">
+            <h3>Insycle: Intelligent Sustainable Water Drainage Cycle Solution</h3>
+
+            <!-- BUTTON -->
+            <button class="project-btn" onclick="toggleProject(this)">
+                View Details →
+            </button>
+
+            <!-- DETAIL -->
+            <div class="project-detail">
+                 <p><b>Purpose:</b> To develop an innovative residential drainage system that integrates rainwater harvesting to improve water efficiency and reduce flood risk.</p>
+                <p><b>Approach:</b> Designed a sustainable drainage concept combining hydrological analysis, rainwater storage, and smart monitoring through IoT integration.</p>
+                <p><b>Outcome:</b> A conceptual smart drainage system equipped with rainwater reuse features, improving water sustainability in residential areas.</p>
+                <p><b>Tools & Features:</b> Integrated IoT-based monitoring system, web-based dashboard design, and mobile-friendly interface for real-time control and visualization.</p>
+    </div>
+</div>
     </div>
 </section>
 
+<!-- ===================== SKILLS ===================== -->
 <section id="skills">
     <h2>Skills</h2>
-    <ul>
-        <li>ANSYS Fluent</li>
-        <li>2D & 3D Modeling</li>
-        <li>Hydraulic Analysis</li>
-        <li>Problem Solving</li>
-    </ul>
+
+    <div class="skills-container">
+
+        <div class="skill-group">
+            <h3>Software & Tools</h3>
+            <ul>
+                <li>ANSYS Fluent (CFD)</li>
+                <li>HEC-RAS</li>
+                <li>EPANET</li>
+                <li>AutoCAD</li>
+                <li>Revit</li>
+                <li>SketchUp</li>
+                <li>ArcGIS</li>
+                <li>GeoStudio</li>
+                <li>Ms. Excel</li>
+                <li>Ms. Project</li>
+            </ul>
+        </div>
+
+        <div class="skill-group">
+            <h3>Technical Skills</h3>
+            <ul>
+                <li>Hydraulic Analysis</li>
+                <li>Flood Modeling</li>
+                <li>Drainage Design</li>
+                <li>Cross Section</li>
+                <li>Irrigation Design</li>
+                <li>3D Modeling</li>
+                <li>Cost Estimation (RAB)</li>
+                <li>Project Monitoring</li>
+            </ul>
+        </div>
+
+        <div class="skill-group">
+            <h3>Creative</h3>
+            <ul>
+                <li>Canva</li>
+                <li>CapCut</li>
+                <li>Poster Design</li>
+            </ul>
+        </div>
+
+        <div class="skill-group">
+            <h3>Soft Skills</h3>
+            <ul>
+                <li>Problem Solving</li>
+                <li>Communication</li>
+                <li>Teamwork</li>
+                <li>Attention to Detail</li>
+                <li>Adaptability</li>
+            </ul>
+        </div>
+
+    </div>
 </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:pipitcollege@gmail.com">pipitcollege@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/pipit-lusianawati" target="_blank">linkedin.com/in/pipit-lusianawati</a></p>
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="contact-section">
+
+    <div class="contact-container">
+
+        <!-- KIRI -->
+        <div class="contact-left">
+            <h2 class="contact-title">Let's Connect</h2>
+            <p class="contact-sub">
+                Feel free to reach out for collaboration, projects,
+                or just a simple conversation.
+            </p>
+        </div>
+
+        <!-- KANAN -->
+        <div class="contact-right">
+            <p>
+                📧 <a href="mailto:pipitcollege@gmail.com">pipitcollege@gmail.com</a>
+            </p>
+
+            <p>
+                💼 <a href="https://linkedin.com/in/pipit-lusianawati" target="_blank">
+                    linkedin.com/in/pipit-lusianawati
+                </a>
+            </p>
+
+            <p>
+                📷 <a href="https://instagram.com/pipitlusii" target="_blank">
+                    @pipitlusii
+                </a>
+            </p>
+
+            <p>
+                📱 <a href="https://wa.me/62859180375633" target="_blank">
+                    0859-1803-7563
+                </a>
+            </p>
+        </div>
+
+    </div>
+
 </section>
 
 <script src="script.js"></script>
+
+<div id="imgViewer" class="img-viewer" onclick="closeImage()">
+    <img id="imgPreview">
+</div>
+
+<!-- Modal -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+</div>
+
 </body>
 </html>
